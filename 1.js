@@ -1,3 +1,2 @@
-const obj = { a: 1, b: 2 };
-obj.c = 3;
-console.log(obj);
+let x = 'TPOE'
+console.log(x)
