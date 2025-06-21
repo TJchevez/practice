@@ -1,11 +1,7 @@
-var x = 10;
+console.log('front')
 
-const fn = () => {
-    if (true) {
-        x = 1;
-        let y = 2;
-    }
-}
-console.log(x);
+fetch('api.com/users').then((res) =>{
+    console.log(res);
+});
 
-fn();
+console.log('simplified')
