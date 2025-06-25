@@ -1,3 +1,5 @@
 const reverseString = (str) => {
-return str.split('').reverse().join('');
+return str
+.split("")
+.reduce((accumulator, currentValue) => currentValue + accumulator);
 };
