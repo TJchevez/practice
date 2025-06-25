@@ -1,7 +1,3 @@
-console.log('front')
-
-fetch('api.com/users').then((res) =>{
-    console.log(res);
-});
-
-console.log('simplified')
+const reverseString = (str) => {
+return str.split('').reverse().join('');
+};
