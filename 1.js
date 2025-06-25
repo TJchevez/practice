@@ -1,5 +1,10 @@
 const reverseString = (str) => {
-return str
-.split("")
-.reduce((accumulator, currentValue) => currentValue + accumulator);
+let reversed = '';
+
+for (let char of str) {
+    reversed = char + reversed;
+}
+
+return reversed;
+
 };
