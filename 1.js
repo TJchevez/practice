@@ -1,1 +1,1 @@
-const reverseString = (str)
+const reverseString = (str) =>
