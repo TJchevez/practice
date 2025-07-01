@@ -1,5 +1,5 @@
-const reverseString = (str) => {
-return str
-.split("")
-.reduce((accumulator, currentValue) => currentValue + accumulator);
+const palindrome = (str) = => {
+return str.split("").every((char, index) => (
+char === str [str.length -1 -index]);
+))
 };
