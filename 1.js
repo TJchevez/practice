@@ -1,1 +1,1 @@
-const reverse
+const reverseString = (str)
