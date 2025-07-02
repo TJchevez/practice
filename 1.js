@@ -6,5 +6,5 @@ if (str[i] !== str[oppositeIndex]) {
     return false
     }
     }
-    return true
+    
 };
