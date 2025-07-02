@@ -4,7 +4,5 @@ for (let i=0; i<middle; ++i {
 const oppositeIndex = str.length -1 -index;
 if (str[i] !== str[oppositeIndex]) { 
     return false
-    }
-    }
     
 };
