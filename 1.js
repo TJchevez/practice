@@ -1,1 +1,1 @@
-const palimdrome
+const reverseString
