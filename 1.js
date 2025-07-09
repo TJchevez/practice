@@ -1,4 +1,4 @@
 const reverseString = (str) => {
 return str
 .split("")
-.reduce((accumulator, currentValue) => currentValue + accumu
+.reduce((accumulator, curren=> currentValue + accumu
