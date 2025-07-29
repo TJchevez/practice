@@ -3,4 +3,3 @@ const palindrome = (str) => {
     char === str[str.length - 1 - index]
   ))
 };
-
