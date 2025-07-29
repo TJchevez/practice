@@ -1,2 +1,11 @@
-if(i !== uniqueArray.length -1) {
-  idString += '${uniqueArray[i]}
+const reverseString = (str) => {
+  let reversed = '';
+
+
+  for (let char of str) {
+    reversed = char + reversed;
+  }
+
+
+  return reversed;
+};
