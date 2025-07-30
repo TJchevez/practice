@@ -14,6 +14,3 @@ const capitalize2 = (str) => {
 
   return result;
 };
-
-
-
