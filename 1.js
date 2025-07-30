@@ -10,4 +10,3 @@ const arrayChunk = (array, size) => {
 
   return chunkedArray;
 };
-
