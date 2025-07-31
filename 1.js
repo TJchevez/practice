@@ -1,13 +1,10 @@
-const steps = (n) => {
-  for (let row = 0; row < n; ++row) {
-    let step = "";
-    for (let column = 0; column < n; ++column) {
-      if (column <= row) {
-        step += "#";
-      } else {
-        step += " ";
-      }
+const palindrome = (str) => {
+  const middle = Math.floor(str.length / 2);
+  for (let i = 0; i < middle; ++i) {
+    const oppositeIndex = str.length - 1 - i;
+    if (str[i] !== str[oppositeIndex]) {
+      return false;
     }
-    console.log(step);
   }
+  return true;
 };
