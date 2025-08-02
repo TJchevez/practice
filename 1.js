@@ -1,9 +1,19 @@
-const stringifyId = (arr) => {
-  const idArray = arr.map(obj => obj.id);
+ const maxCharacter = (str) => {
+   const charMap = new Map();
+   let max = 0;
+   let maxChar = "";
 
 
-  const uniqueIdArray = [...new Set(idArray)];
+   for (const char of str) {
+     charMap.set(char, charMap.get(char) + 1 || 1)
+   }
 
 
-  return uniqueIdArray.join(", ");
+   for (const [char, count] of charMap) {
+     if (count > max) {
+       max = count;
+       maxChar = char;
+     }
+   }
+   return maxChar;
 };
