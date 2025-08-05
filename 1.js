@@ -1,13 +1,12 @@
-function func1(a, b, c) {
-  console.log(arguments[0]);
-  // Expected output: 1
-
-  console.log(arguments[1]);
-  // Expected output: 2
-
-  console.log(arguments[2]);
-  // Expected output: 3
+function longestString() {
+  let longest = "";
+  if (arguments.length === 0) {
+    throw new TypeError("At least one string is required");
+  }
+  for (const arg of arguments) {
+    if (arg.length > longest.length) {
+      longest = arg;
+    }
+  }
+  return longest;
 }
-
-func1(1, 2, 3);
-
