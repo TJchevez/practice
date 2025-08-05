@@ -1,11 +1,18 @@
-function func(a) {
-  arguments[0] = 99; // updating arguments[0] also updates a
+function funcWithDefault(a = 55) {
+  arguments[0] = 99; // updating arguments[0] does not also update a
   console.log(a);
 }
-func(10); // 99
+funcWithDefault(10); // 10
 
-function func2(a) {
-  a = 99; // updating a also updates arguments[0]
+function funcWithDefault2(a = 55) {
+  a = 99; // updating a does not also update arguments[0]
   console.log(arguments[0]);
 }
-func2(10); // 99
+funcWithDefault2(10); // 10
+
+// An untracked default parameter
+function funcWithDefault3(a = 55) {
+  console.log(arguments[0]);
+  console.log(arguments.length);
+}
+funcWithDefault3(); // undefined; 0
