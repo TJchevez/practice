@@ -1,21 +1,13 @@
- const maxCharacter = (str) => {
-   const charMap = new Map();
-   let max = 0;
-   let maxChar = "";
+function func1(a, b, c) {
+  console.log(arguments[0]);
+  // Expected output: 1
 
+  console.log(arguments[1]);
+  // Expected output: 2
 
-   for (const char of str) {
-     charMap.set(char, charMap.get(char) + 1 || 1)
-   }
+  console.log(arguments[2]);
+  // Expected output: 3
+}
 
-
-   for (const [char, count] of charMap) {
-     if (count > max) {
-       max = count;
-       maxChar = char;
-     }
-   }
-   return maxChar;
-};
-
+func1(1, 2, 3);
 
