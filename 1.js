@@ -1,7 +1,4 @@
-var createCounter = function(n) {
-    
-    return function() {
-        return n++;
-        
-    };
+const reverseString = (str) => {
+  return str.split('').reverse().join('');
 };
+
