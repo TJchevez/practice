@@ -7,6 +7,3 @@ const stringifyId = (arr) => {
 
   return uniqueIdArray.join(", ");
 };
-
-
-
