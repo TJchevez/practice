@@ -8,5 +8,3 @@ const palindrome = (str) => {
   }
   return true;
 };
-
-
