@@ -1,23 +1,9 @@
-const maxCharacter = (str) => {
-  const charMap = {};
-  let max = 0;
-  let maxChar = "";
+const reverseString = (str) => {
+  return str
+    .split("")
+    .reduce((accumulator, currentValue) => currentValue + accumulator);
+};
 
-  
-  for (let char of str) {
-    if (charMap[char]) {
-      charMap[char] = charMap[char] + 1;
-    }
-    else {
-      charMap[char] = 1;
-    }
-  }
-
-  for (let char in charMap) {
-    if (charMap[char] > max) {
-      max = charMap[char];
-      maxChar = char;
-    }
   }
 
   return maxChar;
