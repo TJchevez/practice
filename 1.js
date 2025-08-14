@@ -1,11 +1,5 @@
 const reverseString = (str) => {
-  return str
-    .split("")
-    .reduce((accumulator, currentValue) => currentValue + accumulator);
+  return str.split('').reverse().join('');
 };
 
-  }
-
-  return maxChar;
-};
 
