@@ -1,16 +1,20 @@
-const capitalize2 = (str) => {
-  let result = str[0].toUpperCase();
+// COOL SOLUTION (added after video)
+const steps2 = (n) => {
+  // Create an array filled with the most amount of spaces we will need in a row
+  const spacesArray = new Array(n - 1).fill(" ");
 
 
-  for (let i = 1; i < str.length; ++i) {
-    if (str[i - 1] === " ") {
-      result += str[i].toUpperCase();
-    }
-    else {
-      result += str[i];
-    }
+  for (let row = 0; row < n; ++row) {
+    // Create an array of all the hashes we need on the row
+    const hashArray = new Array(row + 1).fill("#");
+
+
+    // Create a separate array, adding the hashes then the spaces needed afterwards
+    const step = [...hashArray, ...spacesArray.slice(0, n - hashArray.length)];
+
+
+    // Convert our array of hashes and spaces back to a string to console log
+    console.log(step.join(""));
   }
-
-
-  return result;
 };
+
