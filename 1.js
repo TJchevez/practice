@@ -1,13 +1,39 @@
-const arrayChunk = (array, size) => {
-  const chunkedArray = [];
+ const anagrams1 = (strA, strB) => {
+  const charMapA = buildCharMap(strA);
+  const charMapB = buildCharMap(strB);
 
 
-  for (let i = 0; i < array.length; i += size) {
-    const subarray = array.slice(i, i + size);
-    chunkedArray.push(subarray);
+  if (charMapA.size !== charMapB.size) {
+    return false;
   }
 
 
-  return chunkedArray;
+  for (const [charA, countA] of charMapA) {
+    if (charMapB.get(charA) !== countA) {
+      return false;
+    }
+  }
+
+
+  return true;
 };
+
+
+const buildCharMap = (str) => {
+  const charMap = new Map();
+
+
+  for (const char of removeSpacesAndLowerCase(str)) {
+    charMap.set(char, charMap.get(char) + 1 || 1);
+  }
+
+
+  return charMap;
+}
+
+
+const removeSpacesAndLowerCase = (str) => {
+  return str.toLowerCase().replaceAll(" ", "")
+}
+
 
