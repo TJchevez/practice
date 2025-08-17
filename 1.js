@@ -9,7 +9,6 @@ const steps2 = (n) => {
     const hashArray = new Array(row + 1).fill("#");
 
 
-    // Create a separate array, adding the hashes then the spaces needed afterwards
     const step = [...hashArray, ...spacesArray.slice(0, n - hashArray.length)];
 
 
