@@ -1,14 +1,16 @@
-const steps = (n) => {
-  for (let row = 0; row < n; ++row) {
-    let step = "";
-    for (let column = 0; column < n; ++column) {
-      if (column <= row) {
-        step += "#";
-      } else {
-        step += " ";
-      }
-    }
-    console.log(step);
-  }
-};
+const capitalize2 = (str) => {
+  let result = str[0].toUpperCase();
 
+
+  for (let i = 1; i < str.length; ++i) {
+    if (str[i - 1] === " ") {
+      result += str[i].toUpperCase();
+    }
+    else {
+      result += str[i];
+    }
+  }
+
+
+  return result;
+};
