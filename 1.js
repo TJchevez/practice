@@ -5,7 +5,6 @@ const steps2 = (n) => {
 
 
   for (let row = 0; row < n; ++row) {
-    // Create an array of all the hashes we need on the row
     const hashArray = new Array(row + 1).fill("#");
 
 
