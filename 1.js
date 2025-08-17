@@ -13,7 +13,6 @@ const steps2 = (n) => {
     const step = [...hashArray, ...spacesArray.slice(0, n - hashArray.length)];
 
 
-    // Convert our array of hashes and spaces back to a string to console log
     console.log(step.join(""));
   }
 };
