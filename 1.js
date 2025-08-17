@@ -1,9 +1,20 @@
-const stringifyId = (arr) => {
-  const idArray = arr.map(obj => obj.id);
+ const pyramid = (n) => {
+  const columnWidth = 2 * n - 1;
+  const middle = Math.floor(columnWidth / 2);
 
 
-  const uniqueIdArray = [...new Set(idArray)];
+  for (let row = 0; row < n; ++row) {
+    let step = "";
 
 
-  return uniqueIdArray.join(", ");
+    for (let column = 0; column < columnWidth; ++column) {
+      if (column >= middle - row && column <= middle + row) {
+        step += "#"
+      }
+      else {
+        step += " "
+      }
+    }
+    console.log(step)
+  }
 };
