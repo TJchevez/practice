@@ -1,10 +1,7 @@
-const anagrams = (strA, strB) => {
-  return cleanString(strA) === cleanString(strB);
+var createCounter = function(n) {
+    
+    return function() {
+        return n++;
+        
+    };
 };
-
-
-const cleanString = (str) => {
-  return str.replaceAll(" ", "").toLowerCase().split("").sort().join("");
-};
-
-
