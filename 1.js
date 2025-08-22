@@ -35,3 +35,4 @@ const buildCharMap = (str) => {
 const removeSpacesAndLowerCase = (str) => {
   return str.toLowerCase().replaceAll(" ", "")
 }
+
