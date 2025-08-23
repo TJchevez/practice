@@ -1,19 +1,37 @@
- const maxCharacter = (str) => {
-   const charMap = new Map();
-   let max = 0;
-   let maxChar = "";
+ const anagrams1 = (strA, strB) => {
+  const charMapA = buildCharMap(strA);
+  const charMapB = buildCharMap(strB);
 
 
-   for (const char of str) {
-     charMap.set(char, charMap.get(char) + 1 || 1)
-   }
+  if (charMapA.size !== charMapB.size) {
+    return false;
+  }
 
 
-   for (const [char, count] of charMap) {
-     if (count > max) {
-       max = count;
-       maxChar = char;
-     }
-   }
-   return maxChar;
+  for (const [charA, countA] of charMapA) {
+    if (charMapB.get(charA) !== countA) {
+      return false;
+    }
+  }
+
+
+  return true;
 };
+
+
+const buildCharMap = (str) => {
+  const charMap = new Map();
+
+
+  for (const char of removeSpacesAndLowerCase(str)) {
+    charMap.set(char, charMap.get(char) + 1 || 1);
+  }
+
+
+  return charMap;
+}
+
+
+const removeSpacesAndLowerCase = (str) => {
+  return str.toLowerCase().replaceAll(" ", "")
+}
