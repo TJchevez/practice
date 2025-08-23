@@ -1,10 +1,4 @@
 const palindrome = (str) => {
-  const middle = Math.floor(str.length / 2);
-  for (let i = 0; i < middle; ++i) {
-    const oppositeIndex = str.length - 1 - i;
-    if (str[i] !== str[oppositeIndex]) {
-      return false;
-    }
-  }
-  return true;
+  const reversedString = str.split("").reverse().join("");
+  return str === reversedString;
 };
