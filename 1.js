@@ -13,5 +13,4 @@ const capitalize2 = (str) => {
 
 
   return result
-console.log(result)
 };
