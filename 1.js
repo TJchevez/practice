@@ -1,9 +1,6 @@
-const stringifyId = (arr) => {
-  const idArray = arr.map(obj => obj.id);
+const reverseInteger = (int) => {
+  const reversed = int.toString().split("").reverse().join("");
 
 
-  const uniqueIdArray = [...new Set(idArray)];
-
-
-  return uniqueIdArray.join(", ");
+  return parseInt(reversed) * Math.sign(int);
 };
