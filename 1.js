@@ -1,6 +1,4 @@
-const reverseInteger = (int) => {
-  const reversed = int.toString().split("").reverse().join("");
-
-
-  return parseInt(reversed) * Math.sign(int);
+const palindrome = (str) => {
+  const reversedString = str.split("").reverse().join("");
+  return str === reversedString;
 };
