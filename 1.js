@@ -1,17 +1,20 @@
-const capitalize2 = (str) => {
-  let result = str[0].toUpperCase();
+ const pyramid = (n) => {
+  const columnWidth = 2 * n - 1;
+  const middle = Math.floor(columnWidth / 2);
 
 
-  for (let i = 1; i < str.length; ++i) {
-    if (str[i - 1] === " ") {
-      result += str[i].toUpperCase();
+  for (let row = 0; row < n; ++row) {
+    let step = "";
+
+
+    for (let column = 0; column < columnWidth; ++column) {
+      if (column >= middle - row && column <= middle + row) {
+        step += "#"
+      }
+      else {
+        step += " "
+      }
     }
-    else {
-      result += str[i];
-    }
+    console.log(step)
   }
-
-  return result
 };
-
-
