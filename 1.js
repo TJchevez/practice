@@ -1,9 +1,24 @@
-const stringifyId = (arr) => {
+const stringifyId2 = (arr) => {
   const idArray = arr.map(obj => obj.id);
+  const uniqueArray = [];
+  let idString = "";
 
 
-  const uniqueIdArray = [...new Set(idArray)];
+  for (let id of idArray) {
+    if (!uniqueArray.includes(id)) {
+      uniqueArray.push(id);
+    }
+  }
 
 
-  return uniqueIdArray.join(", ");
-};
+  for (let i = 0; i < uniqueArray.length; ++i) {
+    if (i !== uniqueArray.length - 1) {
+      idString += `${uniqueArray[i]}, `;
+    }
+    else {
+      idString += uniqueArray[i];
+    }
+  }
+
+
+  return idString;
