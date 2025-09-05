@@ -9,6 +9,7 @@ const steps = (n) => {
       }
     }
     console.log(step);
+    
   }
 };
 
