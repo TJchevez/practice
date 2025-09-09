@@ -1,19 +1,24 @@
- const maxCharacter = (str) => {
-   const charMap = new Map();
-   let max = 0;
-   let maxChar = "";
+const stringifyId2 = (arr) => {
+  const idArray = arr.map(obj => obj.id);
+  const uniqueArray = [];
+  let idString = "";
 
 
-   for (const char of str) {
-     charMap.set(char, charMap.get(char) + 1 || 1)
-   }
+  for (let id of idArray) {
+    if (!uniqueArray.includes(id)) {
+      uniqueArray.push(id);
+    }
+  }
 
 
-   for (const [char, count] of charMap) {
-     if (count > max) {
-       max = count;
-       maxChar = char;
-     }
-   }
-   return maxChar;
-};
+  for (let i = 0; i < uniqueArray.length; ++i) {
+    if (i !== uniqueArray.length - 1) {
+      idString += `${uniqueArray[i]}, `;
+    }
+    else {
+      idString += uniqueArray[i];
+    }
+  }
+
+
+  return idString;
