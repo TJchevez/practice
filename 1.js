@@ -4,6 +4,7 @@ const maxCharacter = (str) => {
   let maxChar = "";
 
 
+
   for (let char of str) {
     if (charMap[char]) {
       charMap[char] = charMap[char] + 1;
