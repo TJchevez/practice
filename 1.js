@@ -1,3 +1,32 @@
+<<<<<<< HEAD
 const reverseString = (str) => {
 
 };
+=======
+const maxCharacter = (str) => {
+  const charMap = {};
+  let max = 0;
+  let maxChar = "";
+
+
+
+  for (let char of str) {
+    if (charMap[char]) {
+      charMap[char] = charMap[char] + 1;
+    }
+    else {
+      charMap[char] = 1;
+    }
+  }
+
+  for (let char in charMap) {
+    if (charMap[char] > max) {
+      max = charMap[char];
+      maxChar = char;
+    }
+  }
+
+
+  return maxChar;
+};
+>>>>>>> 6aecfa7e8193d01995872c4b0dd5d80ed3be4172
