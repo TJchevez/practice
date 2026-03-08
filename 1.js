@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const reverseString = (str) => {
 
 };
