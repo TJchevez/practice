@@ -28,4 +28,4 @@ const maxCharacter = (str) => {
 
   return maxChar;
 };
->>>>>>> 6aecfa7e8193d
+>>>>>>> 6aecfa7e8193
