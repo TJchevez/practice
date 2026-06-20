@@ -28,4 +28,4 @@ const maxCharacter = (str) => {
 
   return maxChar;
 };
->36786432567643457754688
+>3678643256764345775468
