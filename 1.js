@@ -1,31 +1,19 @@
-const reverseString = (str) => {
 
-};
-=======
-const maxCharacter = (str) => {
-  const charMap = {};
-  let max = 0;
-  let maxChar = "";
+function findDuplicates(items) {
 
+    const seen = [];
+    const duplicates = [];
 
+    for (let i = 0; i < items.length; i++) {
+      if(seen) {
+        return items.length[i];
+      }
 
-  for (let char of str) {
-    if (charMap[char]) {
-      charMap[char] = charMap[char] + 1;
     }
-    else {
-      charMap[char] = 1;
-    }
-  }
 
-  for (let char in charMap) {
-    if (charMap[char] > max) {
-      max = charMap[char];
-      maxChar = char;
-    }
-  }
+    return duplicates;
+}
 
-
-  return maxChar;
-};
->35688544789
+console.log(
+    findDuplicates(["api", "user", "api", "login", "user", "api"])
+);
