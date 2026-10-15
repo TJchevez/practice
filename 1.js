@@ -13,3 +13,4 @@ function findDuplicates(items) {
 console.log(
     findDuplicates(["api", "user", "api", "login", "user", "api"])
 );
+
