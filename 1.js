@@ -1,14 +1,10 @@
-
 function findDuplicates(items) {
-
     const seen = [];
     const duplicates = [];
 
     for (let i = 0; i < items.length; i++) {
-      if(seen) {
-        return items.length[i];
-      }
-
+        const currentItem = items[i];
+        
     }
 
     return duplicates;
