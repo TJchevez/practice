@@ -1,12 +1,21 @@
-const userItems = ["api", "user", "api", "login", "user", "cloud"];
+const logs = [
+    "INFO",
+    "ERROR",
+    "WARNING",
+    "ERROR",
+    "INFO",
+    "ERROR"
+];
 
-function firstUnique(items) {
-  for (let i = 0; i < items.length; i++) {
-    const currentItem = items[i];
-    if (items.indexOf(currentItem) === items.lastIndexOf(currentItem)) {
-      return currentItem;
+function countErrors(logs) {
+    let count = 0;
+for (let i = 0; i < logs.length; ++i) {
+    const errorFound = logs[i]
+    if (errorFound === "ERROR") {
+        count++;
     }
-  }
 }
+return count;
+};
 
-console.log (firstUnique(userItems));
+console.log(countErrors(logs));
