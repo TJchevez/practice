@@ -1,21 +1,15 @@
-// count successful requests
+const responseTimes = [120, 350, 90, 800, 240, 610];
 
-const statusCodes = [200, 404, 201, 500, 204, 403, 200];
-
-function countSuccessfulRequests(statusCodes) {
-    const minorStatusCode = 200;
-    const majorStatusCode = 300
-    let count = 0;
-
-    for (let i = 0; i < statusCodes.length; ++i) {
-        const currentItem = statusCodes[i];
-
-        if (currentItem >= minorStatusCode && currentItem < majorStatusCode) {
-            ++count;
-        }
-
+function findSlowestResponse(responseTimes) {
+    let highestNumber = responseTimes[0];
+    
+for (let i = 0; i < responseTimes.length; ++i) {
+    const currentItem = responseTimes[i];
+    if (highestNumber < currentItem) {
+    highestNumber = currentItem
 }
-return count;
+}
+return highestNumber;
 }
 
-console.log(countSuccessfulRequests(statusCodes));
+console.log(findSlowestResponse(responseTimes))
