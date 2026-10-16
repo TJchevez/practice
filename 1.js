@@ -1,18 +1,21 @@
-const statusCodes = [200, 404, 200, 500, 201, 403, 200];
+// count successful requests
 
-function getFailedRequests(statusCodes) {
-    const errorThreshold = 400;
-    const failedRequests = [];
+const statusCodes = [200, 404, 201, 500, 204, 403, 200];
 
-    for (let i = 0; i < statusCodes.length; i++) {
+function countSuccessfulRequests(statusCodes) {
+    const minorStatusCode = 200;
+    const majorStatusCode = 300
+    let count = 0;
+
+    for (let i = 0; i < statusCodes.length; ++i) {
         const currentItem = statusCodes[i];
 
-        if (currentItem >= errorThreshold) {
-            failedRequests.push(currentItem);
+        if (currentItem >= minorStatusCode && currentItem < majorStatusCode) {
+            ++count;
         }
-    }
 
-    return failedRequests;
+}
+return count;
 }
 
-console.log(getFailedRequests(statusCodes));
+console.log(countSuccessfulRequests(statusCodes));
