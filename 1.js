@@ -12,4 +12,5 @@ for (let i = 0; i < responseTimes.length; ++i) {
 return highestNumber;
 }
 
+
 console.log(findSlowestResponse(responseTimes))
