@@ -14,4 +14,9 @@ for(let i = 0; i < responseTimes.length; ++i) {
 return num.length;
 }
 
+<<<<<<< HEAD
 console.log(countSlowResponses(responseTimes))
+=======
+
+console.log(findSlowestResponse(responseTimes))
+>>>>>>> b39f265a5f5f5b1303ee3126b3fcd059cf68ac7c
