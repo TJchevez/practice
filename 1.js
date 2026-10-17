@@ -1,15 +1,17 @@
-const responseTimes = [120, 350, 90, 800, 240, 610];
+const responseTimes = [120, 450, 90, 700, 310, 800, 200];
 
-function findSlowestResponse(responseTimes) {
-    let highestNumber = responseTimes[0];
+function countSlowResponses(responseTimes) {
+    const slowResponse = 300;
+    let num = [];
+
+for(let i = 0; i < responseTimes.length; ++i) {
+    const count = responseTimes[i];
+    if (slowResponse  < count) {
+        num.push(count)
+    }
     
-for (let i = 0; i < responseTimes.length; ++i) {
-    const currentItem = responseTimes[i];
-    if (highestNumber < currentItem) {
-    highestNumber = currentItem
 }
-}
-return highestNumber;
+return num.length;
 }
 
-console.log(findSlowestResponse(responseTimes))
+console.log(countSlowResponses(responseTimes))
