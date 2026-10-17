@@ -1,15 +1,17 @@
-const loadTimes = [420, 180, 650, 90, 310, 140];
+const responseTimes = [120, 450, 90, 700, 200, 850, 310];
 
-function findSlowestLoadTime(loadTimes) {
-    let slowestTime = loadTimes[0];
-for (let i = 0; i < loadTimes.length; ++i) {
-    const currentTime = loadTimes[i];
+function getSuccessfulResponses(responseTimes) {
+const fastTime = 300;
+const storage = [];
 
-    if (slowestTime < currentTime) {
-        slowestTime = currentTime
+for (let i = 0; i < responseTimes.length; ++i) {
+    const currentTime = responseTimes[i];
+
+    if ( currentTime <= fastTime) {
+        storage.push(currentTime)
     }
 }
-return slowestTime;
+return storage;
 }
 
-console.log(findSlowestLoadTime(loadTimes));
+console.log(getSuccessfulResponses(responseTimes));
