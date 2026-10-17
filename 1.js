@@ -1,18 +1,15 @@
-const statusCodes = [200, 500, 503, 599, 600, 404];
+const loadTimes = [420, 180, 650, 90, 310, 140];
 
-function getServerErrors(statusCodes) {
-    const errorDetected  = 500;
-    const majorErrordetected = 599;
-    const codes = [];
+function findSlowestLoadTime(loadTimes) {
+    let slowestTime = loadTimes[0];
+for (let i = 0; i < loadTimes.length; ++i) {
+    const currentTime = loadTimes[i];
 
-for (let i = 0; i < statusCodes.length; ++i) {
-    const serverErrorCode = statusCodes[i];
-
-    if ((serverErrorCode >= errorDetected) && (serverErrorCode <= majorErrordetected)) {
-        codes.push(serverErrorCode);
+    if (slowestTime < currentTime) {
+        slowestTime = currentTime
     }
 }
-return codes;
+return slowestTime;
 }
 
-console.log(getServerErrors(statusCodes));
+console.log(findSlowestLoadTime(loadTimes));
