@@ -1,22 +1,18 @@
-const responseTimes = [120, 450, 90, 700, 310, 800, 200];
+const statusCodes = [200, 500, 503, 599, 600, 404];
 
-function countSlowResponses(responseTimes) {
-    const slowResponse = 300;
-    let num = [];
+function getServerErrors(statusCodes) {
+    const errorDetected  = 500;
+    const majorErrordetected = 599;
+    const codes = [];
 
-for(let i = 0; i < responseTimes.length; ++i) {
-    const count = responseTimes[i];
-    if (slowResponse  < count) {
-        num.push(count)
+for (let i = 0; i < statusCodes.length; ++i) {
+    const serverErrorCode = statusCodes[i];
+
+    if ((serverErrorCode >= errorDetected) && (serverErrorCode <= majorErrordetected)) {
+        codes.push(serverErrorCode);
     }
-    
 }
-return num.length;
+return codes;
 }
 
-<<<<<<< HEAD
-console.log(countSlowResponses(responseTimes))
-=======
-
-console.log(findSlowestResponse(responseTimes))
->>>>>>> b39f265a5f5f5b1303ee3126b3fcd059cf68ac7c
+console.log(getServerErrors(statusCodes));
