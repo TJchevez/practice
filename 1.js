@@ -1,14 +1,18 @@
-const responseTimes = [180, 420, 250, 750, 300, 900, 610];
+const responseTimes = [120, 450, 700, 850, 300, 950, 610, 200];
 
-function findFirstCriticalResponse(responseTimes) {
+function getModerateResponses(responseTimes) {
+const minResponse = 400;
+const maxResponse = 800;
+const storage = [];
+
 for (let i = 0; i < responseTimes.length; ++i) {
-    const greatestResponse = responseTimes[i];
+    const currentResponse = responseTimes[i];
 
-    if (greatestResponse >= 600) {
-        return greatestResponse; 
-    } 
+    if(currentResponse >= minResponse && currentResponse <= maxResponse) {
+        storage.push(currentResponse)
+    }
 }
-return -1;
+return storage;
 }
 
-console.log(findFirstCriticalResponse(responseTimes));
+console.log(getModerateResponses(responseTimes));
