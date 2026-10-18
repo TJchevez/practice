@@ -1,15 +1,14 @@
-const responseTimes = [420, 180, 650, 90, 310, 140];
+const responseTimes = [180, 420, 250, 750, 300, 900, 610];
 
-function findFirstFastResponse(responseTimes) {
+function findFirstCriticalResponse(responseTimes) {
 for (let i = 0; i < responseTimes.length; ++i) {
-    const fastestTime = responseTimes[i];
+    const greatestResponse = responseTimes[i];
 
-    if(fastestTime < 200) {
-        return i
-    }
-
+    if (greatestResponse >= 600) {
+        return greatestResponse; 
+    } 
 }
 return -1;
 }
 
-console.log(findFirstFastResponse(responseTimes));
+console.log(findFirstCriticalResponse(responseTimes));
