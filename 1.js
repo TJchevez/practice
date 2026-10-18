@@ -1,7 +1,10 @@
-const users = ["anna", "mike", "sara", "james", "lucy"];
+const responseTimes = [1.2, 0.5, 2, 0.8];
 
-function findUserIndex(users, username) {
- return users.indexOf(username);
+function convertToMilliseconds(responseTimes) {
+const convertedTime = responseTimes.map((times) => {
+    return times * 1000;
+})
+return convertedTime;
 }
 
-console.log(findUserIndex(users, "bob"));
+console.log(convertToMilliseconds(responseTimes));
