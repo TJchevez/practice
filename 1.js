@@ -10,4 +10,3 @@ return convertedTime;
 console.log(convertToMilliseconds(responseTimes));
 
 
-
