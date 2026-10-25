@@ -9,6 +9,7 @@ for (let i = 0; i < responseTimes.length; ++i) {
     }
 }
 return storage;
+
 }
 
 console.log(convertToMilliseconds(responseTimes));
