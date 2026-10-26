@@ -1,7 +1,11 @@
-const pets = [
-    ["Luna", "cat", 3],
-    ["Max", "dog", 7],
-    ["Kiwi", "bird", 2]
+const foods = [
+  ["pizza", 12],
+  ["burger", 9],
+  ["tacos", 8],
+  ["pasta", 14]
 ];
 
-const currentPet = pets[1];
+for (let i = 0; i < foods.length; i++) {
+  console.log("i:", i);
+  console.log("row:", foods[i]);
+}
