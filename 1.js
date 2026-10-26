@@ -1,9 +1,14 @@
-const pass = [1, 2, 3]
+const highScores = [3000, 5000, 10000]
 
-function test(pass) {
-    if(pass <= 3 ) {
+function functionalScores(highScores) {
+    for (let i = 0; i < highScores.length; ++i) {
+        const currentScore = highScores[i];
+        if (currentScore !== 3000) {
+            return ("sigma")
+        } else {
+            return ("not sigma")
+        }
     }
-    return "Narly"
 }
 
-console.log(test(pass))
+console.log(functionalScores(highScores));
