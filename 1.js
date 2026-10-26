@@ -1,14 +1,10 @@
-const highScores = [3000, 5000, 10000]
+const responseTimes = [1.2, 0.5, 2, 0.8];
 
-function functionalScores(highScores) {
-    for (let i = 0; i < highScores.length; ++i) {
-        const currentScore = highScores[i];
-        if (currentScore !== 3000) {
-            return ("sigma")
-        } else {
-            return ("not sigma")
-        }
-    }
+function convertToMilliseconds(responseTimes) {
+const convertedTime = responseTimes.map((times) => {
+    return times * 1000;
+})
+return convertedTime;
 }
 
-console.log(functionalScores(highScores));
+console.log(convertToMilliseconds(responseTimes));
