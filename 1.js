@@ -1,10 +1,7 @@
-const responseTimes = [1.2, 0.5, 2, 0.8];
+const pets = [
+    ["Luna", "cat", 3],
+    ["Max", "dog", 7],
+    ["Kiwi", "bird", 2]
+];
 
-function convertToMilliseconds(responseTimes) {
-const convertedTime = responseTimes.map((times) => {
-    return times * 1000;
-})
-return convertedTime;
-}
-
-console.log(convertToMilliseconds(responseTimes));
+const currentPet = pets[1];
