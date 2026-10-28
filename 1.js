@@ -1,11 +1,15 @@
-const foods = [
-  ["pizza", 12],
-  ["burger", 9],
-  ["tacos", 8],
-  ["pasta", 14]
+const classrooms = [
+  ["Ana", "Ben"],
+  ["Chris", "Dina", "Eli"],
+  ["Faith"]
 ];
 
-for (let i = 0; i < foods.length; i++) {
-  console.log("i:", i);
-  console.log("row:", foods[i]);
+for (let i = 0; i < classrooms.length; i++) {
+  const row = classrooms[i];
+
+  for (let j = 0; j < row.length; j++) {
+    console.log("class:", i);
+    console.log("student:", j);
+    console.log("name:", row[j]);
+  }
 }
