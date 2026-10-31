@@ -1,16 +1,20 @@
-const orders = [
-  ["ADD", "pizza", 12],
-  ["ADD", "soda", 3],
-  ["REMOVE", "pizza", 1],
-  ["TOTAL"]
+const commands = [
+  ["ADD", 5],
+  ["ADD", 3],
+  ["ADD", 10]
 ];
 
-for (let i = 0; i < orders.length; i++) {
-  const row = orders[i];
+let total = 0;
+
+for (let i = 0; i < commands.length; i++) {
+  const row = commands[i];
 
   const command = row[0];
+  const amount = row[1];
 
-  console.log("i:", i);
-  console.log("row:", row);
-  console.log("command:", command);
+  if (command === "ADD") {
+    total = total + amount;
+  }
+
+  console.log("total:", total);
 }
