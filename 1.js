@@ -1,15 +1,16 @@
-const classrooms = [
-  ["Ana", "Ben"],
-  ["Chris", "Dina", "Eli"],
-  ["Faith"]
+const orders = [
+  ["ADD", "pizza", 12],
+  ["ADD", "soda", 3],
+  ["REMOVE", "pizza", 1],
+  ["TOTAL"]
 ];
 
-for (let i = 0; i < classrooms.length; i++) {
-  const row = classrooms[i];
+for (let i = 0; i < orders.length; i++) {
+  const row = orders[i];
 
-  for (let j = 0; j < row.length; j++) {
-    console.log("class:", i);
-    console.log("student:", j);
-    console.log("name:", row[j]);
-  }
+  const command = row[0];
+
+  console.log("i:", i);
+  console.log("row:", row);
+  console.log("command:", command);
 }
