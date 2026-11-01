@@ -1,20 +1,33 @@
 const commands = [
-  ["ADD", 5],
-  ["ADD", 3],
-  ["ADD", 10]
+  ["SCORE", 10],
+  ["SCORE", 5],
+  ["CHECK"],
+  ["PENALTY", 3],
+  ["SCORE", 8],
+  ["CHECK"]
 ];
 
-let total = 0;
 
-for (let i = 0; i < commands.length; i++) {
-  const row = commands[i];
+function gameScore(commands) {
+  let score  = 0;
+  const checkedScores = [];
 
-  const command = row[0];
-  const amount = row[1];
-
-  if (command === "ADD") {
-    total = total + amount;
+  for(let i = 0; i < commands.length; ++i) {
+    const row = commands[i];
+    const command = row[0];
+    const amount = row[1];
+    if (command === "SCORE") {
+      score = score + amount;
+    } 
+    else if (command === "PENALTY") {
+      score = score - amount;
+    } 
+    else if (command === "CHECK") {
+      checkedScores.push(score)
+    }
+    
   }
-
-  console.log("total:", total);
+  return checkedScores;
+  
 }
+console.log(gameScore(commands))
