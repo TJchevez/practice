@@ -1,33 +1,28 @@
+let coins = 25;
+
 const commands = [
-  ["SCORE", 10],
-  ["SCORE", 5],
-  ["CHECK"],
-  ["PENALTY", 3],
-  ["SCORE", 8],
-  ["CHECK"]
+  ["SPEND", 7],
+  ["EARN", 10],
+  ["SPEND", 4],
+  ["EARN", 2],
+  ["SPEND", 8],
 ];
 
-
-function gameScore(commands) {
-  let score  = 0;
-  const checkedScores = [];
-
+function coinSlot(commands) {
+  let wallet = 25;
   for(let i = 0; i < commands.length; ++i) {
-    const row = commands[i];
-    const command = row[0];
-    const amount = row[1];
-    if (command === "SCORE") {
-      score = score + amount;
-    } 
-    else if (command === "PENALTY") {
-      score = score - amount;
-    } 
-    else if (command === "CHECK") {
-      checkedScores.push(score)
+    const currentAmount = commands[i];
+    const command = currentAmount[0];
+    const amount = currentAmount[1]
+
+    if (command === "SPEND") {
+      wallet = wallet - amount
     }
-    
+    else if (command === "EARN") {
+      wallet = wallet + amount
+    }
   }
-  return checkedScores;
-  
+  return wallet;
 }
-console.log(gameScore(commands))
+
+console.log(coinSlot(commands));
