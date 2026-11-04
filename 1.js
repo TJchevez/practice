@@ -26,3 +26,4 @@ function coinSlot(commands) {
 }
 
 console.log(coinSlot(commands));
+
