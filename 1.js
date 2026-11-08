@@ -1,4 +1,4 @@
-let coins = 25;
+let coins = 20;
 
 const commands = [
   ["SPEND", 7],
