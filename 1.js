@@ -1,29 +1,13 @@
-let coins = 20;
-
 const commands = [
-  ["SPEND", 7],
-  ["EARN", 10],
-  ["SPEND", 4],
-  ["EARN", 2],
-  ["SPEND", 8],
+  ["DAMAGE", 15],
+  ["HEAL", 10],
+  ["DAMAGE", 25],
+  ["HEAL", 5],
+  ["DAMAGE", 12],
 ];
 
-function coinSlot(commands) {
-  let wallet = 25;
-  for(let i = 0; i < commands.length; ++i) {
-    const currentAmount = commands[i];
-    const command = currentAmount[0];
-    const amount = currentAmount[1]
-
-    if (command === "SPEND") {
-      wallet = wallet - amount
-    }
-    else if (command === "EARN") {
-      wallet = wallet + amount
-    }
-  }
-  return wallet;
+function calculateHealth(commands) {
+  // Your code goes here
 }
 
-console.log(coinSlot(commands));
-
+console.log(calculateHealth(commands));
