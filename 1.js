@@ -1,13 +1,8 @@
 const commands = [
-  ["DAMAGE", 15],
+  ["DAMAGE", 20],
+  ["COINS", 15],
   ["HEAL", 10],
-  ["DAMAGE", 25],
-  ["HEAL", 5],
-  ["DAMAGE", 12],
+  ["SPEND", 5],
+  ["DAMAGE", 8],
+  ["COINS", 20],
 ];
-
-function calculateHealth(commands) {
-  // Your code goes here
-}
-
-console.log(calculateHealth(commands));
