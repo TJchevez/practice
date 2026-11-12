@@ -30,4 +30,4 @@ function calculateGameStats(commands) {
   return { health: currentHealth, coins: currentCoins };
 }
 
-console.log(calculateGameStats(commands));
+console.log(calculateGameStats(comman
