@@ -29,7 +29,7 @@ function calculateGameStats(commands) {
             currentHealth = currentHealth + currentNumber
         }
 }
-return {coins: currentCoins, health: currentHealth}
+return {coin: currentCoins, health: currentHealth}
 }
 
 console.log(calculateGameStats(commands));
