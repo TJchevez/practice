@@ -1,35 +1,40 @@
 const commands = [
-  ["DAMAGE", 30],
-  ["COINS", 50],
-  ["SPEND", 18],
-  ["HEAL", 12],
-  ["SPEND", 7],
-  ["DAMAGE", 9],
-  ["COINS", 5],
+  "COIN",
+  "BUY",
+  "COIN",
+  "BUY"
 ];
 
-function calculateGameStats(commands) {
-    let currentHealth = 80;
-    let currentCoins = 0;
-    for (let i = 0; i < commands.length; ++i) {
-        const currentCommand = commands[i];
-        const currentAction = currentCommand[0];
-        const currentNumber = currentCommand[1];
+function processCommands(commands) {
+  let health = 10;
+  let coins = 0;
 
-        if (currentAction === "COINS") {
-            currentCoins = currentCoins + currentNumber
-        }
-        else if (currentAction === "SPEND") {
-            currentCoins = currentCoins - currentNumber
-        }
-        else if (currentAction === "DAMAGE") {
-            currentHealth = currentHealth - currentNumber
-        }
-        else if (currentAction === "HEAL") {
-            currentHealth = currentHealth + currentNumber
-        }
-}
-return {coin: currentCoins, health: currentHealth}
+  for (let i = 0; i < commands.length; ++i) {
+    const currentCommand = commands[i];
+    if (currentCommand === "COIN") {
+      coins += 3;
+    } else if (currentCommand === "HIT") {
+      health -= 4;
+    } else if (currentCommand === "BUY") {
+      if (coins >= 5) {
+        coins -= 5;
+      } else {
+        console.log("Sorry homie, you're broke! LOL")
+      }
+    } else if (currentCommand === "HEAL") {
+      if (health + 2 <= 10) {
+        health += 2;
+      } else {
+        health = 10;
+      }
+    } else if (currentCommand === "REST") {
+      if (health < 10) {
+        health += 1;
+      }
+    }
+  }
+
+  return [health, coins];
 }
 
-console.log(calculateGameStats(commands));
+console.log(processCommands(commands));
