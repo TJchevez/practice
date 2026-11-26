@@ -7,7 +7,7 @@ const commands = [
 
 function processCommands(commands) {
   let health = 10;
-  let coins = 0;
+  let coins = 7;
 
   for (let i = 0; i < commands.length; ++i) {
     const currentCommand = commands[i];
