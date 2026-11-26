@@ -1,40 +1,33 @@
-const commands = [
-  "COIN",
-  "BUY",
-  "COIN",
-  "BUY"
-];
+const commands = ["share", "share", "share", "refill"];
 
-function processCommands(commands) {
-  let health = 10;
-  let coins = 7;
-
+function thanksgivingDinner(commands) {
+  let plate = 5;
   for (let i = 0; i < commands.length; ++i) {
     const currentCommand = commands[i];
-    if (currentCommand === "COIN") {
-      coins += 3;
-    } else if (currentCommand === "HIT") {
-      health -= 4;
-    } else if (currentCommand === "BUY") {
-      if (coins >= 5) {
-        coins -= 5;
+ 
+    if (currentCommand === "eat") {
+      if (plate -1 <= 0) {
+        plate = 0;
       } else {
-        console.log("Sorry homie, you're broke! LOL")
+        plate = plate - 1;
       }
-    } else if (currentCommand === "HEAL") {
-      if (health + 2 <= 10) {
-        health += 2;
-      } else {
-        health = 10;
-      }
-    } else if (currentCommand === "REST") {
-      if (health < 10) {
-        health += 1;
-      }
-    }
+} 
+else if (currentCommand === "refill") {
+  if (plate + 3 <= 10) {
+    plate = plate + 3
+} else {
+    plate = 10
+}
+} else if (currentCommand === "share") {
+  if (plate - 2 <= 0) {
+    plate = 0
+  } else {
+    plate = plate - 2 
   }
-
-  return [health, coins];
+}
+    
+  }
+  return plate
 }
 
-console.log(processCommands(commands));
+console.log(thanksgivingDinner(commands));
