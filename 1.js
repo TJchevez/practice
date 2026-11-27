@@ -1,7 +1,7 @@
 const commands = ["share", "share", "share", "refill"];
 
 function thanksgivingDinner(commands) {
-  let plate = 5;
+  let plate = 10;
   for (let i = 0; i < commands.length; ++i) {
     const currentCommand = commands[i];
  
